@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/personal_container_padding"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ImageView
+            android:id="@+id/userImage"
+            android:src="@drawable/ic_avatar"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="@dimen/personal_image_size"
+            android:layout_height="@dimen/personal_image_size"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/userImage"
+            android:layout_marginStart="@dimen/personal_image_size"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nameText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/personal_large_text_size"
+                android:textColor="@android:color/black"
+                tools:text="John Doe"/>
+
+            <TextView
+                android:id="@+id/ageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/normal_text_size"
+                tools:text="32 years"/>
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/normal_text_size"
+                    android:paddingEnd="@dimen/personal_label_end_padding"
+                    android:text="@string/personal_email_label" />
+
+                <TextView
+                    android:id="@+id/emailText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/normal_text_size"
+                    tools:text="email@email.com"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/normal_text_size"
+                    android:paddingEnd="@dimen/personal_label_end_padding"
+                    android:text="@string/personal_phone_label" />
+
+                <TextView
+                    android:id="@+id/phoneText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/normal_text_size"
+                    tools:text="+55 (39) 1982 181"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/personalDivider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_height"
+            android:layout_below="@+id/userImage"
+            android:layout_marginTop="@dimen/personal_top_margin"
+            android:background="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personalDivider"
+            android:layout_marginTop="@dimen/personal_top_margin"
+            android:textSize="@dimen/normal_text_size"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
+
+        <TextView
+            android:id="@+id/objectiveTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/addressText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/normal_text_size"
+            android:textColor="@android:color/black"
+            android:text="@string/personal_objective_label" />
+
+        <TextView
+            android:id="@+id/objectiveText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/objectiveTitle"
+            android:layout_marginTop="@dimen/personal_top_margin"
+            android:textSize="@dimen/normal_text_size"
+            tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_connection_error" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="@dimen/progressbar_size"
+        android:layout_height="@dimen/progressbar_size"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Resume</string>
+
+    <string-array name="pager_titles">
+        <item>Personal</item>
+        <item>Work History</item>
+        <item>Skills</item>
+    </string-array>
+
+    <string name="connection_retry">Retry</string>
+    <string name="connection_error">Connection error</string>
+
+    <string name="personal_email_label">Email:</string>
+    <string name="personal_phone_label">Phone:</string>
+    <string name="personal_objective_label">Objective</string>
+
+    <string name="work_company_label">Company:</string>
+    <string name="work_location_label">Location:</string>
+    <string name="work_period_label">Period:</string>
+
+    <string name="skill_percentage_text">%.2f %%</string>
+</resources>
